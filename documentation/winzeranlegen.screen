@@ -1,62 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="513" height="457" measuredWidth="513" measuredHeight="457"/>
-  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="473" height="17" measuredWidth="473" measuredHeight="17" background="#000"/>
-  <widgets xsi:type="model:Label" id="7" x="104" y="144" text="Winzer anlegen" measuredWidth="87" measuredHeight="23" foreground="#fff">
+  <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="433" height="193" measuredWidth="433" measuredHeight="193"/>
+  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="433" height="17" measuredWidth="433" measuredHeight="17" background="#000"/>
+  <widgets xsi:type="model:Label" id="7" x="104" y="144" text="Winzer anlegen/bearbeiten" measuredWidth="148" measuredHeight="23" foreground="#fff">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Group" id="30" x="131" y="191" width="476" height="170" text="Neuer Winzer/Winzer bearbeiten" measuredWidth="476" measuredHeight="170">
+  <widgets xsi:type="model:Group" id="30" x="114" y="160" width="415" height="169" text="Neuer Winzer/Winzer bearbeiten" measuredWidth="415" measuredHeight="169">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="31" x="224" y="218" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="31" x="200" y="183" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="32" x="163" y="218" text="Name" measuredWidth="38" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="32" x="125" y="183" width="45" text="Name" measuredWidth="45" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="34" x="496" y="218" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="34" x="426" y="218" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="35" x="404" y="218" text="Straße" measuredWidth="39" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="35" x="344" y="183" text="Straße" measuredWidth="39" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="36" x="496" y="250" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="36" x="426" y="250" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="37" x="404" y="250" text="Ort" measuredWidth="23" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="37" x="344" y="218" width="39" text="Ort" measuredWidth="39" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="38" x="496" y="280" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="38" x="426" y="183" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="39" x="404" y="280" text="Postleitzahl" measuredWidth="66" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="39" x="344" y="250" text="Postleitzahl" measuredWidth="66" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="40" x="224" y="280" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="40" x="200" y="250" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="41" x="166" y="280" text="Land" measuredWidth="32" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="41" x="125" y="253" width="45" text="Land" measuredWidth="45" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="42" x="333" y="320" text="Speichern" measuredWidth="72" measuredHeight="25">
+  <widgets xsi:type="model:Button" id="42" x="431" y="296" text="Speichern" measuredWidth="72" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="46" x="160" y="250" text="Region" measuredWidth="43" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="46" x="125" y="218" width="45" text="Region" measuredWidth="45" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="48" x="224" y="250" width="81" measuredWidth="81" measuredHeight="23">
+  <widgets xsi:type="model:TextField" id="48" x="200" y="218" width="81" measuredWidth="81" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Group" id="51" x="131" y="384" width="476" height="193" text="Winzer suchen" measuredWidth="476" measuredHeight="193">
+  <widgets xsi:type="model:Button" id="54" x="344" y="296" text="Abbrechen" measuredWidth="78" measuredHeight="25">
     <font/>
-  </widgets>
-  <widgets xsi:type="model:SearchField" id="52" x="141" y="408" width="224" text="Winzer suchen" measuredWidth="224" measuredHeight="24">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Table" id="53" x="148" y="448" text="Nummer,Name{empty-arrow-down},Region,Land, Straße,Ort,Postleitzahl,{delete},{options}&#xA;12312,Meier,Rioja,Portugal,Vinoweg 3,,,[{delete}],[{options}]&#xA;&#xA;&#xA;&#xA;" measuredWidth="441" measuredHeight="111" alternative="#eee">
-    <font/>
-    <items x="392" y="25" width="16" height="16" text=" "/>
-    <items x="419" y="25" width="16" height="16" text=" "/>
   </widgets>
   <hRuler/>
   <vRuler/>
