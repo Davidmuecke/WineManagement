@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
   <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="665" height="201" measuredWidth="665" measuredHeight="201"/>
-  <widgets xsi:type="model:Group" id="2" x="113" y="168" width="646" height="169" text="Neuer Wein" measuredWidth="646" measuredHeight="169">
+  <widgets xsi:type="model:Group" id="2" x="113" y="168" width="646" height="169" text="Neuer Wein/Wein bearbeiten" measuredWidth="646" measuredHeight="169">
     <font/>
   </widgets>
   <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="665" height="17" measuredWidth="665" measuredHeight="17" background="#000"/>
-  <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Wein anlegen" measuredWidth="78" measuredHeight="23" foreground="#fff">
+  <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Wein anlegen/bearbeiten" measuredWidth="139" measuredHeight="23" foreground="#fff">
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="26" x="699" y="304" text="Fertig" measuredWidth="50" measuredHeight="25">

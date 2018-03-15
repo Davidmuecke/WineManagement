@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="127" y="56" width="642" height="241" measuredWidth="642" measuredHeight="241"/>
+  <widgets xsi:type="model:Group" id="4" x="136" y="80" width="623" height="209" text="Bestellung" measuredWidth="623" measuredHeight="209">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="2" x="147" y="136" width="598" height="113" text="Nummer,Kunde,Weinsorte,Winzer,Jahrgang,Anzahl,Einzelpreis,Gesamtpreis, {delete}&#xD;&#xA;123412342,Max Mustermann,Rotwein,Werner Weiner,1960,20,5€,100€,[{delete}]&#xD;&#xA;&#xD;&#xA;" measuredWidth="598" measuredHeight="113" alternative="#eee">
+    <font/>
+    <items x="575" y="25" width="16" height="16" text=" "/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="5" x="147" y="97" width="598" text="Bestellung suchen" measuredWidth="598" measuredHeight="24">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="6" x="128" y="56" width="641" height="17" measuredWidth="641" measuredHeight="17" background="#000"/>
+  <widgets xsi:type="model:Label" id="7" x="128" y="53" text="Bestellungsübersicht" measuredWidth="115" measuredHeight="23" foreground="#fff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="30" x="653" y="254" text="Wein anlegen" measuredWidth="92" measuredHeight="25">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
