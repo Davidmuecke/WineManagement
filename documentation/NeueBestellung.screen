@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="545" height="529" measuredWidth="545" measuredHeight="529"/>
+  <widgets xsi:type="model:Group" id="4" x="113" y="368" width="527" height="297" text="Bestellung" measuredWidth="527" measuredHeight="297">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="2" x="124" y="424" width="508" text="Nummer,Name,Winzer,Jahrgang,Bestand,Preis (einzeln),Anzahl,{add}&#xD;&#xA;123412342,Rotwein,Werner Weiner,1960,2000,5€,20,[{add}]&#xD;&#xA;&#xD;&#xA;" measuredWidth="508" measuredHeight="69" alternative="#eee">
+    <font/>
+    <items x="483" y="25" width="16" height="16" text=" "/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="3" x="114" y="170" width="527" height="183" text="Kunde" measuredWidth="527" measuredHeight="183">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="5" x="124" y="385" width="508" text="Wein suchen" measuredWidth="508" measuredHeight="24">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="545" height="17" measuredWidth="545" measuredHeight="17" background="#000"/>
+  <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Neue Bestellung" measuredWidth="92" measuredHeight="23" foreground="#fff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="8" x="124" y="200" width="165" text="Kunde auswählen" measuredWidth="165" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="9" x="344" y="199" width="121" text="Kunde anlegen" measuredWidth="121" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="10" x="512" y="199" text="Kunde bearbeiten" measuredWidth="113" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="124" y="240" text="Name" measuredWidth="38" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="123" y="280" text="Vorname" measuredWidth="53" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="124" y="314" text="Kundennr." measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="14" x="210" y="240" text="Mustermann" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="15" x="210" y="280" width="79" text="Max" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="16" x="210" y="314" width="79" text="1234792" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="21" x="124" y="512" width="508" text="Nummer,Name,Winzer,Jahrgang,Anzahl,Preis (einzeln), Preis (gesamt),{delete}&#xD;&#xA;123412342,Rotwein,Werner Weiner,1960,20,5€,100€,[{delete}]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Summe&#xD;&#xA;" measuredWidth="508" measuredHeight="111" alternative="#eee">
+    <font/>
+    <items x="487" y="25" width="16" height="16" text=" "/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="577" y="632" text="Weiter" measuredWidth="54" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="23" x="488" y="632" text="Abbrechen" measuredWidth="78" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="26" x="344" y="240" height="97" measuredWidth="121" measuredHeight="97">
+    <widgets xsi:type="model:Accordion" id="24" width="121" height="97" text="Rechnungsadresse&#xA;-&#xA;" measuredWidth="121" measuredHeight="97" selection="0">
+      <items x="0" y="2" width="121" height="25" text="Rechnungsadresse"/>
+      <items x="0" y="27" width="121" height="25" text="-"/>
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextArea" id="25" y="23" width="121" height="73" text="Max Mustermann&#xD;&#xA;Rothebühlplatz 41&#xD;&#xA;70173 Stuttgart&#xD;&#xA;Deutschland" measuredWidth="121" measuredHeight="73">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="27" x="512" y="240" width="113" measuredWidth="113" measuredHeight="97">
+    <widgets xsi:type="model:Accordion" id="28" width="113" height="97" text="Lieferadresse&#xA;-&#xA;" measuredWidth="113" measuredHeight="97" selection="0">
+      <items x="0" y="2" width="113" height="25" text="Lieferadresse"/>
+      <items x="0" y="27" width="113" height="25" text="-"/>
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextArea" id="29" y="23" width="113" height="73" text="Max Mustermann&#xD;&#xA;Rothebühlplatz 41&#xD;&#xA;70173 Stuttgart&#xD;&#xA;Deutschland" measuredWidth="113" measuredHeight="73">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

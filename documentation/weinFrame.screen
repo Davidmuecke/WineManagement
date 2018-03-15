@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="721" height="233" measuredWidth="721" measuredHeight="233"/>
+  <widgets xsi:type="model:Group" id="2" x="113" y="168" width="704" height="201" text="Weinübersicht" measuredWidth="704" measuredHeight="201">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="5" x="124" y="185" width="682" text="Wein suchen" measuredWidth="682" measuredHeight="24">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="721" height="17" measuredWidth="721" measuredHeight="17" background="#000"/>
+  <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Weinübersicht" measuredWidth="82" measuredHeight="23" foreground="#fff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="17" x="124" y="216" width="684" text="Nummer,Name{empty-arrow-down},Jahrgang,Bestand, Lieferant,Händlerpreis,Verkaufspreis,Anbauort,Lagerort,{delete},{options}&#xD;&#xA;123412342,Rotwein,1960,2000,Werner Weiner,3.00€,5.00€,Stuttgart,Vaihingen,[{delete}],[{options}]&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" measuredWidth="684" measuredHeight="111" alternative="#eee">
+    <font/>
+    <items x="630" y="25" width="16" height="16" text=" "/>
+    <items x="659" y="25" width="16" height="16" text=" "/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="26" x="716" y="334" text="Wein anlegen" measuredWidth="92" measuredHeight="25">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

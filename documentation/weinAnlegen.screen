@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="104" y="144" width="665" height="201" measuredWidth="665" measuredHeight="201"/>
+  <widgets xsi:type="model:Group" id="2" x="113" y="168" width="646" height="169" text="Neuer Wein" measuredWidth="646" measuredHeight="169">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="665" height="17" measuredWidth="665" measuredHeight="17" background="#000"/>
+  <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Wein anlegen" measuredWidth="78" measuredHeight="23" foreground="#fff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="26" x="699" y="304" text="Fertig" measuredWidth="50" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="27" x="599" y="304" text="Abbrechen" measuredWidth="78" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="28" x="124" y="185" width="74" text="Name" measuredWidth="74" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="29" x="123" y="212" width="76" text="Jahrgang" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="30" x="124" y="244" width="76" text="Liefermenge" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="32" x="199" y="185" width="106" text="Rotwein" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="33" x="199" y="214" width="106" text="1960" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="34" x="199" y="244" width="106" text="2000" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="35" x="599" y="185" width="150" text="Lieferant auswählen" measuredWidth="150" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="36" x="599" y="211" width="150" text="Lieferant anlegen" measuredWidth="150" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="37" x="599" y="243" width="150" text="Lieferant bearbeiten" measuredWidth="150" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="38" x="352" y="185" width="74" text="Händlerpreis" measuredWidth="74" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="39" x="425" y="185" width="106" text="3,00€" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="40" x="352" y="212" width="74" text="Verkaufspreis" measuredWidth="74" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="41" x="425" y="214" width="106" text="5,00€" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="42" x="352" y="244" width="74" text="Anbauort" measuredWidth="74" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="43" x="352" y="274" width="70" text="Lagerort" measuredWidth="70" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="44" x="425" y="244" width="106" text="Stuttgart" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="45" x="425" y="274" width="106" text="Vaihingen" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="46" x="197" y="274" width="108" text=" 08/03/2018  " measuredWidth="108" measuredHeight="23"/>
+  <widgets xsi:type="model:Label" id="47" x="124" y="274" width="76" text="Lieferdatum" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
