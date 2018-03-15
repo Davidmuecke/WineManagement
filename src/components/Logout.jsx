@@ -3,9 +3,9 @@ import AdministrationBackup from "./AdministrationBackup";
 
 class Logout extends Component {
     render() {
-        return {
-
-        }
+        return (
+            <h1></h1>
+        )
     }
 }
 

@@ -2,9 +2,9 @@ import React, { Component}  from 'react';
 
 class AdministrationBackup extends Component {
     render() {
-        return {
-
-        }
+        return (
+            <h1></h1>
+        )
     }
 }
 

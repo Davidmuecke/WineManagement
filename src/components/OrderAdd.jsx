@@ -3,9 +3,9 @@ import AdministrationBackup from "./AdministrationBackup";
 
 class OrderAdd extends Component {
     render() {
-        return {
-
-        }
+        return (
+            <h1></h1>
+        )
     }
 }
 
