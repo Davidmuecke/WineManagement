@@ -1,6 +1,19 @@
 import React, {Component} from 'react';
-//import logo from './logo.svg';
 import './App.css';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import Start from './components/Start';
+import WineOverview from './components/WineOverview';
+import WineAdd from './components/WineAdd';
+import CustomerOverview from './components/CustomerOverview';
+import CustomerAdd from './components/CustomerAdd';
+import SupplierOverview from './components/SupplierOverview';
+import SupplierAdd from './components/SupplierAdd';
+import AdministrationUser from './components/AdministrationUser';
+import AdministrationBackup from './components/AdministrationBackup';
+import AdministrationStats from './components/AdministrationStats';
+import OrderOverview from './components/OrderOverview';
+import OrderAdd from './components/OrderAdd.jsx';
 
 class App extends Component {
     /**
@@ -10,7 +23,13 @@ class App extends Component {
     constructor(props) {
         super(props);
         //ENUM with states
-        this.STATES = Object.freeze({"start": 1, "wineOverview": 2, "wineAdd": 3})
+        this.STATES = Object.freeze({"login":0, "logout":1, "start": 2,
+                                    "wineOverview": 10, "wineAdd": 11,
+                                    "customerOverview":20, "customerAdd":21,
+                                    "supplierOverview":30, "supplierAdd":31,
+                                    "administrationUser":40, "administrationBackup":41, "administrationStats":42,
+                                    "orderOverview": 50, "orderAdd":51
+        })
         this.state = {
             screen: this.STATES.start,
             login: false
@@ -34,14 +53,35 @@ class App extends Component {
      */
     returnState() {
         switch (this.state.screen) {
+            case this.STATES.login:
+                return <Login />;
+            case this.STATES.logout:
+                return <Logout />;
             case this.STATES.start:
-                return <Start name={"einszweidrei!"}/>;
-
-            case this.STATES.wineAdd:
-                return <WineAdd/>;
-
+                return <Start />;
             case this.STATES.wineOverview:
                 return <WineOverview/>;
+            case this.STATES.wineAdd:
+                return <WineAdd/>;
+            case this.STATES.customerOverview:
+                return <CustomerOverview/>;
+            case this.STATES.customerAdd:
+                return <CustomerAdd/>;
+            case this.STATES.supplierOverview:
+                return <SupplierOverview/>;
+            case this.STATES.supplierAdd:
+                return <SupplierAdd/>;
+            case this.STATES.administrationUser:
+                return <AdministrationUser/>;
+            case this.STATES.administrationBackup:
+                return <AdministrationBackup/>;
+            case this.STATES.administrationStats:
+                return <AdministrationStats/>;
+            case this.STATES.orderOverview:
+                return <OrderOverview/>;
+            case this.STATES.orderAdd:
+                return <OrderAdd/>;
+
             default:
                 return "FALSE STATE!";
         }
@@ -60,86 +100,6 @@ class App extends Component {
         );
     }
 
-}
-
-class WineAdd extends Component {
-    render() {
-        return (
-            <div className={"container"}>
-                <h2>Wein hinzufügen</h2>
-                <form className={"form-horizontal"}>
-                    <div className={"row"}>
-                        <div className={"col-lg-4"}>
-                            <div className="form-group">
-                                <label className={"control-label sm-2"} for="wName">Name</label>
-                                <input type="text" className="form-control sm-10" id="wName" />
-                            </div>
-                            <div className="form-group">
-                                <label for="wJahrgang">Jahrgang</label>
-                                <input type="number" className="form-control" id="wJahrgang" />
-                            </div>
-                            <div className="form-group">
-                                <label for="wMenge">Menge</label>
-                                <input type="number" className="form-control" id="wMenge" />
-                            </div>
-                        </div>
-                        <div className={"col-lg-4"}>
-                            <div className={"form-group row"}>
-                                <label className={"control-label col-sm-3 col-form-label"} for="wName">Name</label>
-                                <div className={"col-sm-9"}>
-                                    <input type="text" className="form-control sm-10" id="wName" />
-                                </div>
-                            </div>
-                            <div className={"form-group row"}>
-                                <label className={"control-label col-sm-3 col-form-label"} for="wJahrgang">Jahrgang</label>
-                                <div className={"col-sm-9"}>
-                                    <input type="number" className="form-control sm-10" id="wJahrgang" />
-                                </div>
-                            </div>
-                            <div className={"form-group row"}>
-                                <label className={"control-label col-sm-3 col-form-label"} for="wMenge">Liefermenge</label>
-                                <div className={"col-sm-9"}>
-                                    <input type="number" className="form-control sm-10" id="wMenge" />
-                                </div>
-                            </div>
-                            <div className={"form-group row"}>
-                                <label className={"control-label col-sm-3 col-form-label"} for="wLieferdatum">Lieferdatum</label>
-                                <div className={"col-sm-9"}>
-                                    <input type="date" className="form-control sm-10" id="wLieferdatum" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className={"col-lg-4"}>
-                            drei
-                        </div>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        );
-    }
-}
-
-class WineOverview extends Component {
-    render() {
-        return (
-            <div className={"container"}>
-                <h2>WineOverview!</h2>
-                {this.props.name}
-            </div>
-        );
-    }
-}
-
-class Start extends Component {
-    render() {
-        return (
-            <div className={"container"}>
-                <h2>Willkommen bei Semsa!</h2>
-                {this.props.name}
-            </div>
-        );
-    }
 }
 
 class Menu extends Component {
