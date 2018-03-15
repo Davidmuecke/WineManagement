@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="48" y="56" width="801" height="577" measuredWidth="801" measuredHeight="577"/>
+  <widgets xsi:type="model:Group" id="2" x="72" y="80" width="761" height="273" text="Backup" measuredWidth="761" measuredHeight="273">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="3" x="72" y="360" width="761" height="241" text="Update" measuredWidth="761" measuredHeight="241">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="4" x="82" y="104" width="441" text="Führen sie jetzt ein Backup durch:" measuredWidth="441" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="5" x="82" y="152" text="Letztes Backup durchgeführt am:" measuredWidth="180" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="6" x="328" y="103" text="Backup durchführen" measuredWidth="128" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="328" y="152" text="12.12.17" measuredWidth="48" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="82" y="384" width="441" text="Führen sie jetzt ein Update durch:" measuredWidth="441" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="9" x="328" y="383" text="Update durchführen" measuredWidth="127" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="82" y="432" text="Letztes Update durchgeführt am:" measuredWidth="175" measuredHeight="21">
+    <font size="11px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="82" y="464" text="Aktuelle Version:" measuredWidth="92" measuredHeight="21">
+    <font size="11px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="82" y="496" text="Verfügbare Version:" measuredWidth="107" measuredHeight="21">
+    <font size="11px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="328" y="431" text="12.12.17" measuredWidth="48" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="14" x="328" y="463" text="1.0.0" measuredWidth="30" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="328" y="495" text="1.5.7" measuredWidth="30" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
