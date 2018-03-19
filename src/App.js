@@ -140,7 +140,6 @@ class Menu extends Component {
                                     <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
                                             className="dropdown-item btn-link">Hinzufügen
                                     </button>
-                                    <button className="dropdown-item btn-link">Link4</button>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
@@ -181,7 +180,7 @@ class Menu extends Component {
                             </li>
                             <li className="nav-item">
                                 <button onClick={() => this.props.setState(this.props.STATES.logout)}
-                                        className="dropdown-item btn-link">Abmelden
+                                        className="nav-link btn-link">Abmelden
                                 </button>
                             </li>
 
