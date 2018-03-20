@@ -2,7 +2,7 @@ import React, { Component}  from 'react';
 
 
 class WineAdd extends Component {
-    //TODO: Grid Layout correct
+
 
     render() {
         return (
@@ -12,7 +12,7 @@ class WineAdd extends Component {
                     <div className={"row"}>
                         <div className={"col-lg-4"}>
                             <div className={"form-group row"}>
-                                <label className={"control-label col-sm-4 col-form-label"} for="wName">Name</label>
+                                <label className={"control-label col-sm-4 col-form-label"}>Name</label>
                                 <div className={"col-sm-8"}>
                                     <input type="text" className="form-control sm-10" id="wName"/>
                                 </div>
@@ -69,7 +69,7 @@ class WineAdd extends Component {
                             <div className={"form-group row"}>
                                 <label className={"control-label col-sm-4 col-form-label"}>Lieferant</label>
                                 <div className={"col-sm-8"}>
-                                    <select class="form-control" id="wLieferant">
+                                    <select className="form-control" id="wLieferant">
                                         <option>Lieferant1</option>
                                         <option>Lieferant2</option>
                                         <option>Lieferant3</option>
@@ -78,18 +78,18 @@ class WineAdd extends Component {
                                 </div>
                             </div>
                             <div className={"form-group row"}>
-                                <button className={"btn "}>Lieferant neu anlegen</button>
+                                <button className={"btn formButton"}>Lieferant neu anlegen</button>
                             </div>
                             <div className={"form-group row"}>
-                                <button className={"btn "}>Lieferant bearbeiten</button>
+                                <button className={"btn formButton"}>Lieferant bearbeiten</button>
                             </div>
                         </div>
                     </div>
                     <div className={"row"}>
                         <div className={"col-lg-8"}></div>
                         <div className={"col-lg-4"}>
-                            <button type="submit" className="btn btn-secondary">Abbrechen</button>
-                            <button type="cancel" className="btn btn-primary">Speichern</button>
+                            <button type="cancel" className="btn btn-primary float-right">Speichern</button>
+                            <button type="submit" className="btn btn-secondary float-left">Abbrechen</button>
                         </div>
                     </div>
                 </form>

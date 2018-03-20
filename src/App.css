@@ -4,6 +4,16 @@
     .navbar {
         text-align: center;
     }
+
+    .formButton {
+        width: 100%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .btn-secondary {
+        margin-right: 1em;
+    }
 /* .App {
   text-align: center;
 }
