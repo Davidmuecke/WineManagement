@@ -60,27 +60,27 @@ class App extends Component {
             case this.STATES.start:
                 return <Start />;
             case this.STATES.wineOverview:
-                return <WineOverview/>;
+                return <WineOverview />;
             case this.STATES.wineAdd:
-                return <WineAdd/>;
+                return <WineAdd />;
             case this.STATES.customerOverview:
-                return <CustomerOverview/>;
+                return <CustomerOverview />;
             case this.STATES.customerAdd:
-                return <CustomerAdd/>;
+                return <CustomerAdd />;
             case this.STATES.supplierOverview:
-                return <SupplierOverview/>;
+                return <SupplierOverview />;
             case this.STATES.supplierAdd:
-                return <SupplierAdd/>;
+                return <SupplierAdd />;
             case this.STATES.administrationUser:
-                return <AdministrationUser/>;
+                return <AdministrationUser />;
             case this.STATES.administrationBackup:
-                return <AdministrationBackup/>;
+                return <AdministrationBackup />;
             case this.STATES.administrationStats:
-                return <AdministrationStats/>;
+                return <AdministrationStats />;
             case this.STATES.orderOverview:
-                return <OrderOverview/>;
+                return <OrderOverview />;
             case this.STATES.orderAdd:
-                return <OrderAdd/>;
+                return <OrderAdd />;
 
             default:
                 return "FALSE STATE!";
@@ -115,7 +115,7 @@ class Menu extends Component {
                         </button>
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown">
-                                <button className="nav-link btn-link dropdown-toggle" href="#" id="navbardrop"
+                                <button className="nav-link btn-link dropdown-toggle"  id="navbardrop"
                                         data-toggle="dropdown">
                                     Bestellungen
                                 </button>
@@ -126,11 +126,10 @@ class Menu extends Component {
                                     <button onClick={() => this.props.setState(this.props.STATES.orderAdd)}
                                             className="dropdown-item btn-link">Hinzufügen
                                     </button>
-                                    <button className="dropdown-item btn-link">Link 3</button>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <button className="nav-link btn-link dropdown-toggle" href="#" id="navbardrop"
+                                <button className="nav-link btn-link dropdown-toggle"  id="navbardrop"
                                         data-toggle="dropdown">
                                     Wein
                                 </button>
@@ -147,41 +146,43 @@ class Menu extends Component {
                             <li className="nav-item dropdown">
                                 <button className="nav-link btn-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Winzer</button>
                                 <div className="dropdown-menu">
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineOverview)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.supplierOverview)}
                                             className="dropdown-item btn-link">Übersicht
                                     </button>
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.supplierAdd)}
                                             className="dropdown-item btn-link">Hinzufügen
                                     </button>
-                                    <button className="dropdown-item btn-link">Link 3</button>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
                                 <button className="nav-link btn-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Kunden</button>
                                 <div className="dropdown-menu">
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineOverview)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.customerOverview)}
                                             className="dropdown-item btn-link">Übersicht
                                     </button>
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.customerAdd)}
                                             className="dropdown-item btn-link">Hinzufügen
                                     </button>
-                                    <button className="dropdown-item btn-link">Link 3</button>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
                                 <button className="nav-link btn-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Verwaltung</button>
                                 <div className="dropdown-menu">
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineOverview)}
-                                            className="dropdown-item btn-link">Übersicht
+                                    <button onClick={() => this.props.setState(this.props.STATES.administrationBackup)}
+                                            className="dropdown-item btn-link">Backup
                                     </button>
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
-                                            className="dropdown-item btn-link">Hinzufügen
+                                    <button onClick={() => this.props.setState(this.props.STATES.administrationUser)}
+                                            className="dropdown-item btn-link">Benutzer
                                     </button>
-                                    <button className="dropdown-item btn-link">Link 3</button>
+                                    <button onClick={() => this.props.setState(this.props.STATES.administrationStats)}
+                                            className="dropdown-item btn-link">Statistik
+                                    </button>
                                 </div>
                             </li>
                             <li className="nav-item">
-                                <button className="btn-link nav-link">Abmelden</button>
+                                <button onClick={() => this.props.setState(this.props.STATES.logout)}
+                                        className="dropdown-item btn-link">Abmelden
+                                </button>
                             </li>
 
                         </ul>

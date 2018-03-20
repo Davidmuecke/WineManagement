@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="14" x="96" y="50" width="705" height="591" measuredWidth="705" measuredHeight="591" background="#000"/>
+  <widgets xsi:type="model:Panel" id="1" x="96" y="72" width="705" height="569" measuredWidth="705" measuredHeight="569"/>
+  <widgets xsi:type="model:Group" id="2" x="119" y="128" width="659" height="191" text="Benutzer anlegen/ändern" measuredWidth="659" measuredHeight="191">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="3" x="120" y="328" width="657" height="297" text="Vorhandene Benutzer" measuredWidth="657" measuredHeight="297">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="4" x="136" y="392" width="617" height="217" text="ID,Name,Vorname,Rolle,{delete},{options}&#xA;000, Peter,Severin,Administrator,[{delete}],[{options}]&#xA;001, Henri,Severin,Administrator,[{delete}],[{options}]&#xA;002, Olga,Severin,Benutzer,[{delete}],[{options}]" measuredWidth="617" measuredHeight="217" alternative="#eee">
+    <font/>
+    <items x="512" y="25" width="16" height="16" text=" "/>
+    <items x="576" y="25" width="16" height="16" text=" "/>
+    <items x="512" y="47" width="16" height="16" text=" "/>
+    <items x="576" y="47" width="16" height="16" text=" "/>
+    <items x="512" y="69" width="16" height="16" text=" "/>
+    <items x="576" y="69" width="16" height="16" text=" "/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="6" x="224" y="160" width="112" text="Mustermann" measuredWidth="112" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="154" y="160" text="Name" measuredWidth="38" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="154" y="208" text="Vorname" measuredWidth="53" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="9" x="224" y="208" width="112" text="Max" measuredWidth="112" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="152" y="256" text="Rolle" measuredWidth="32" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="11" x="224" y="256" text="Rolle auswählen" measuredWidth="112" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="12" x="664" y="280" text="Speichern" measuredWidth="72" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="102" y="50" text="Verwaltung Benutzer" measuredWidth="114" measuredHeight="23" foreground="#fff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="16" x="136" y="352" width="617" text="Benutzer suchen" measuredWidth="617" measuredHeight="24">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="17" x="576" y="280" text="Abbrechen" measuredWidth="78" measuredHeight="25">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler>
+    <guides position="262"/>
+  </vRuler>
+  <font size="12px"/>
+</model:Screen>

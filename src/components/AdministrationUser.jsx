@@ -3,9 +3,9 @@ import AdministrationBackup from "./AdministrationBackup";
 
 class AdministrationUser extends Component {
     render() {
-        return {
-
-        }
+        return (
+            <h1></h1>
+        )
     }
 }
 

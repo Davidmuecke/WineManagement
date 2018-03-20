@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Panel" id="1" x="48" y="56" width="801" height="617" measuredWidth="801" measuredHeight="617"/>
+  <widgets xsi:type="model:Group" id="3" x="64" y="72" width="769" height="289" text="Statistiken" measuredWidth="769" measuredHeight="289">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="96" y="112" text="Laufende Bestellungen:" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="96" y="144" text="Abgeschlossene Bestellungen:" measuredWidth="165" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="9" x="96" y="176" text="Stornierte Bestellungen:" measuredWidth="131" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="510" y="176" text="Lieferanten:" measuredWidth="68" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="510" y="144" text="Winzer:" measuredWidth="45" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="512" y="112" text="Weine:" measuredWidth="42" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="304" y="112" text="123" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="14" x="304" y="144" text="456" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="304" y="176" text="789" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="664" y="112" text="123" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="17" x="664" y="144" text="456" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="18" x="664" y="176" text="789" measuredWidth="24" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="19" x="64" y="360" width="769" height="289" text="Nicht mehr auf Lager" measuredWidth="769" measuredHeight="289">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="20" x="80" y="377" width="743" height="262" text="ID,Name,Winzer,Jahrgang&#xA;000, Vodka,Grey Goose,2017&#xA;001, Captain Jack Daniels,Mila Kunis,1983&#xA;002, Sparrow,Black Pearl,1975" measuredWidth="743" measuredHeight="262" alternative="#eee">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
