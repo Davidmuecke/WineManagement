@@ -4,57 +4,33 @@ import React, { Component}  from 'react';
 class SupplierOverview extends Component {
     render() {
         return (
-            <div className={"container"}>
-            <h2>Winzer hinzufügen</h2>
-            <form className={"form-horizontal"}>
-                <div className={"row"}>
-                    <div className={"col-lg-4"}>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sName">Name</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sName" />
-                            </div>
-                        </div>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sRegion">Region</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sRegion" />
-                            </div>
-                        </div>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sLand">Land</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sLand" />
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className={"col-lg-4"}>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sStrasse">Straße</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sStrasse" />
-                            </div>
-                        </div>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sOrt">Ort</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sOrt" />
-                            </div>
-                        </div>
-                        <div className={"form-group row"}>
-                            <label className={"control-label col-sm-3 col-form-label"} for="sPLZ">PLZ</label>
-                            <div className={"col-sm-9"}>
-                                <input type="text" className="form-control sm-10" id="sPLZ" />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" className="btn btn-primary">Abbrechen</button>
-                <button type="submit" className="btn btn-primary">Speichern</button>
-            </form>
-        </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Kundennummer</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">Land</th>
+                    <th scope="col">Straße</th>
+                    <th scope="col">Ort</th>
+                    <th scope="col">PLZ</th>
+                    <th scope="col">Bearbeiten</th>
+                    <th scope="col">Loeschen</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mueller Hans</td>
+                    <td>Champagne</td>
+                    <td>Frankreich</td>
+                    <td>Winestr. 2</td>
+                    <td>Champagne</td>
+                    <td>123123</td>
+                    <td>Stuttgart</td>
+                </tr>
+                </tbody>
+            </table>
         )
     }
 }
