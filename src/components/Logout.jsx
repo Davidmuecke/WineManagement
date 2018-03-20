@@ -1,10 +1,13 @@
 import React, { Component}  from 'react';
-import AdministrationBackup from "./AdministrationBackup";
+
 
 class Logout extends Component {
     render() {
         return (
-            <h1></h1>
+            <div className={"container"}>
+                <h1>Logout</h1>
+                <p>Sie wurden erfolgreich abgemeldet!</p>
+            </div>
         )
     }
 }

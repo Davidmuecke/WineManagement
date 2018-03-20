@@ -4,6 +4,23 @@ body {
   font-family: sans-serif;
 }
 
+.form-stats {
+  margin-bottom: 15%;
+}
+
+.form-stats *, .form-backup *, .form-update * {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.form-user {
+  margin-bottom: 10%;
+}
+
+.btn-user-abbrechen {
+  margin-right: 5%;
+}
+
 btn-sup {
   float: right;
   margin: 1%;
