@@ -13,7 +13,7 @@ import AdministrationUser from './components/AdministrationUser';
 import AdministrationBackup from './components/AdministrationBackup';
 import AdministrationStats from './components/AdministrationStats';
 import OrderOverview from './components/OrderOverview';
-import OrderAdd from './components/OrderAdd.jsx';
+import OrderAdd from './components/OrderAdd';
 
 class App extends Component {
     /**
@@ -120,10 +120,10 @@ class Menu extends Component {
                                     Bestellungen
                                 </button>
                                 <div className="dropdown-menu">
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineOverview)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.orderOverview)}
                                             className="dropdown-item btn-link">Übersicht
                                     </button>
-                                    <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
+                                    <button onClick={() => this.props.setState(this.props.STATES.orderAdd)}
                                             className="dropdown-item btn-link">Hinzufügen
                                     </button>
                                     <button className="dropdown-item btn-link">Link 3</button>
