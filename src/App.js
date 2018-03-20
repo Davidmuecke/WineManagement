@@ -106,10 +106,12 @@ class Menu extends Component {
 
     render() {
         return (
+
             <div className="container-fluid p-0 mb-4">
-                <h1>Semsabums!!</h1>
+                <div className={"headerImg"}>
+                </div>
                 <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-                    <div className={"container"}>
+                    <div className={"container"} id={"navbarContainer"}>
                         <button onClick={() => this.props.setState(this.props.STATES.start)}
                                 className={"btn-link navbar-brand pl-0"}>Semsa.de
                         </button>

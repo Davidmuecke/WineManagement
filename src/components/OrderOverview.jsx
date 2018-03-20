@@ -8,7 +8,7 @@ class OrderOverview extends Component {
             <div className={"container"}>
                 <h2>Übersicht Bestellungen</h2>
                 <form className={"form-horizontal"}>
-                        <div class="input-group col-md-20">
+                        <div class="input-group col-md-12">
                             <input type="text" placeholder="Bestellung suchen" className="form-control sm-10" id="wName" />
                             <span class="input-group-btn">
                                     <button class="btn" type="button">
@@ -43,10 +43,14 @@ class OrderOverview extends Component {
                         </tr>
                         </tbody>
                     </table>
+
+
                     </div>
-
-
-                    <button className="btn btn-primary float-right" >Neue Bestellung</button>
+                    <div className={"row"}>
+                        <div className={"col"}>
+                            <button className="btn btn-primary float-right" >Neue Bestellung</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         );

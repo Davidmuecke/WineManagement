@@ -143,15 +143,17 @@ class OrderAdd extends Component {
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
 
+                        </div>
+
+                    </div>
                     <div className={"row"}>
                         <div className={"col"}>
                             <button type="submit" className="btn btn-primary float-right">Weiter</button>
                             <button type="reset" className="btn btn-primary float-right">Abbrechen</button>
                         </div>
                     </div>
+
 
                 </form>
             </div>
