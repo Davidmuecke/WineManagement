@@ -69,8 +69,13 @@ class OrderAdd extends Component {
 
                     </div>
 
-
                     <div className={"row"}>
+                        <div class="col-md">
+                            <h4>Alle Weine</h4>
+                        </div>
+                    </div>
+                    <div className={"row"}>
+
                     <div class="input-group col-md-20">
                         <input type="text" placeholder="Wein suchen" className="form-control sm-10" id="wName" />
                         <span class="input-group-btn">
@@ -105,9 +110,11 @@ class OrderAdd extends Component {
                             </tbody>
                         </table>
                     </div>
-
-
+                            <div class="col-md">
+                                <h4>Aktuelle Bestellung</h4>
+                            </div>
                         <div class="table-responsive">
+
                             <table className={"table table-striped"}>
                                 <thead>
                                 <tr>
