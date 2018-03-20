@@ -1,6 +1,7 @@
     .btn-link{
         border-width: 0px;
     }
+    
     .navbar {
         text-align: center;
     }
@@ -22,6 +23,10 @@
         color: white;
         background-color:  #670A0A;
         border: none;
+    }
+
+    .btn:hover {
+        background-color: #831515;
     }
 
     .container {

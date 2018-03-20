@@ -99,7 +99,7 @@ class OrderAdd extends Component {
                                 <td>13571275</td><td>Rotwein</td><td>Werner Winzer</td><td>1960</td><td>2000</td><td>5,00€</td><td>20</td><td><a href={"link.htm"}><i class="fas fa-plus"></i></a></td>
                             </tr>
                             <tr>
-                                <td>13571275</td><td>Rotwein</td><td>Werner Winzer</td><td>1960</td><td>2000</td><td>5,00€</td><td>20</td><td><a href={"link.htm"}><i class="fas fa-plus"></i></a></td>
+                                <td>22273829</td><td>Weiswein</td><td>Wille Weiner</td><td>1875</td><td>10</td><td>500,00€</td><td>1</td><td><a href={"link.htm"}><i class="fas fa-plus"></i></a></td>
                             </tr>
 
                             </tbody>
@@ -127,7 +127,7 @@ class OrderAdd extends Component {
                                     <td>13571275</td><td>Rotwein</td><td>Werner Winzer</td><td>1960</td><td>2000</td><td>5,00€</td><td>100,00€</td><td>20</td><td><a href={"link.htm"}><i class="fas fa-times"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td>13571275</td><td>Rotwein</td><td>Werner Winzer</td><td>1960</td><td>2000</td><td>5,00€</td><td>100,00€</td><td>20</td><td><a href={"link.htm"}><i class="fas fa-times"></i></a></td>
+                                    <td>22273829</td><td>Weiswein</td><td>Wille Weiner</td><td>1875</td><td>10</td><td>500,00€</td><td>1000,00€</td><td>2</td><td><a href={"link.htm"}><i class="fas fa-times"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><a href={"link.htm"}><i class="fas fa-times"></i></a></td>
