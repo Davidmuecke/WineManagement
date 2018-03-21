@@ -96,6 +96,12 @@ class App extends Component {
                 <main>
                     {this.returnState()}
                 </main>
+                <footer className="page-footer font-small mdb-color stylish-color-dark fixed-bottom">
+                    <div className="footer-copyright py-3 text-center">
+                        © 2018 Copyright: QuintusQuelle
+                    </div>
+
+                </footer>
             </div>
         );
     }
