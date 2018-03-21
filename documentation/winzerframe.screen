@@ -4,10 +4,9 @@
   <widgets xsi:type="model:Group" id="2" x="113" y="168" width="704" height="201" text="Winzerübersicht" measuredWidth="704" measuredHeight="201">
     <font/>
   </widgets>
-  <widgets xsi:type="model:SearchField" id="5" x="124" y="185" width="508" text="Winzer suchen" measuredWidth="508" measuredHeight="24">
+  <widgets xsi:type="model:SearchField" id="5" x="124" y="185" width="683" text="Winzer suchen" measuredWidth="683" measuredHeight="24">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="721" height="17" measuredWidth="721" measuredHeight="17" background="#000"/>
   <widgets xsi:type="model:Label" id="7" x="104" y="141" text="Winzerübersicht" measuredWidth="91" measuredHeight="23" foreground="#fff">
     <font/>
   </widgets>
@@ -19,6 +18,7 @@
   <widgets xsi:type="model:Button" id="26" x="668" y="334" text="Neuen Winzer anlegen" measuredWidth="139" measuredHeight="25">
     <font/>
   </widgets>
+  <widgets xsi:type="model:Panel" id="6" x="104" y="144" width="721" height="17" measuredWidth="721" measuredHeight="17" background="#000"/>
   <hRuler/>
   <vRuler/>
   <font size="12px"/>

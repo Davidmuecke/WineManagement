@@ -21,11 +21,15 @@ class CustomerOverview extends Component {
             <div className={"container"}>
                 <h2>Kunden Übersicht {this.state.searchTerm}</h2>
                 <form className={"form"}>
-                    <div className={"row"}>
-                        <div className={"col-lg-12 form-group "}>
-                            <input type="text" className="form-control" id="cSuche"
-                                   onChange={() => this.changeFunk(this)}/>
-                        </div>
+                        <div className={"row"}>
+                            <div className="input-group col-md-12">
+                                <input type="text" placeholder="Kunde suchen" className="form-control sm-10" id="cSuche"/>
+                                <span className="input-group-btn">
+                                    <button className="btn" type="button">
+                                        <i className="fas fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
                     </div>
                 </form>
                 <div className={"table-responsive"}>
@@ -41,7 +45,7 @@ class CustomerOverview extends Component {
                         <th scope="col">Rechnungsstr.</th>
                         <th scope="col">Rechnungsort</th>
                         <th scope="col">Rechnungs-PLZ</th>
-                        <th><span className="fa fa-times"></span></th>
+                        <th><i class="fas fa-trash-alt"></i></th>
                         <th><span className="fa fa-cog"></span></th>
                     </tr>
                     </thead>
@@ -56,8 +60,8 @@ class CustomerOverview extends Component {
                         <td>Wilstr. 2</td>
                         <td>Stuttgart</td>
                         <td>70562</td>
-                        <th><span className="fa fa-times"></span></th>
-                        <th><span className="fa fa-cog"></span></th>
+                        <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                        <td><span className="fa fa-cog"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
@@ -69,8 +73,8 @@ class CustomerOverview extends Component {
                         <td>Eifel 3</td>
                         <td>Fondue</td>
                         <td>70562</td>
-                        <th><span className="fa fa-times"></span></th>
-                        <th><span className="fa fa-cog"></span></th>
+                        <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                        <td><span className="fa fa-cog"></span></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
@@ -82,8 +86,8 @@ class CustomerOverview extends Component {
                         <td>Vino 4</td>
                         <td>Milano</td>
                         <td>3453</td>
-                        <th><span className="fa fa-times"></span></th>
-                        <th><span className="fa fa-cog"></span></th>
+                        <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                        <td><span className="fa fa-cog"></span></td>
                     </tr>
                     </tbody>
                 </table>

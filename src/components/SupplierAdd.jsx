@@ -52,10 +52,10 @@ class SupplierAdd extends Component {
                         </div>
                     </div>
                     <div className={"row"}>
-
-                        <div className={"col-lg-8"}>
-                            <button type="submit" className="btn btn-secondary btn-sup">Abbrechen</button>
-                            <button type="submit" className="btn btn-primary btn-sup" >Speichern</button>
+                        <div className={"col-lg-9"}></div>
+                        <div className={"col-lg-3"}>
+                            <button type="cancel" className="btn btn-primary float-right">Speichern</button>
+                            <button type="submit" className="btn btn-secondary float-left">Abbrechen</button>
                         </div>
                     </div>
                 </form>
