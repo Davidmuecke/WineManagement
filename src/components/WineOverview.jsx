@@ -22,14 +22,19 @@ class WineOverview extends Component {
                 <h2>Wein Übersicht {this.state.searchTerm}</h2>
                 <form className={"form"}>
                     <div className={"row"}>
-                        <div className={"col-lg-12 form-group "}>
-                            <input type="text" className="form-control" id="wSuche"
+                        <div className="input-group col-lg-12">
+                            <input type="text" placeholder="Wein suchen" className="form-control sm-10" id="wSuche"
                                    onChange={() => this.changeFunk(this)}/>
+                            <span className="input-group-btn">
+                                <button className="btn" type="button">
+                                    <i className="fas fa-search"></i>
+                                </button>
+                        </span>
                         </div>
                     </div>
                 </form>
                 <div className={"table-responsive"}>
-                    <table className={"table table-striped table-bordered"}>
+                    <table className={"table table-striped"}>
                         <thead>
                         <tr>
                             <th>Nummer</th>
@@ -41,7 +46,7 @@ class WineOverview extends Component {
                             <th>Verkaufspreis</th>
                             <th>Anbauort</th>
                             <th>Lagerort</th>
-                            <th><span className="fa fa-times"></span></th>
+                            <th><span className="fas fa-trash-alt"></span></th>
                             <th><span className="fa fa-cog"></span></th>
                         </tr>
                         </thead>
@@ -56,8 +61,8 @@ class WineOverview extends Component {
                             <td>Prinzen Winzer</td>
                             <td>Reingau</td>
                             <td>Rothebühlplatz 41</td>
-                            <td><span className="fa fa-times"></span></td>
-                            <td><span className="fa fa-cog"></span></td>
+                            <td><a href={"link.html"}><span className="fas fa-trash-alt"></span></a></td>
+                            <td><a href={"link.html"}><span className="fa fa-cog"></span></a></td>
                         </tr>
                         <tr>
                             <td>1234599</td>
@@ -69,11 +74,16 @@ class WineOverview extends Component {
                             <td>Carmen W.</td>
                             <td>Stuttgart</td>
                             <td>Rothebühlplatz 41</td>
-                            <td><span className="fa fa-times"></span></td>
-                            <td><span className="fa fa-cog"></span></td>
+                            <td><a href={"link.html"}><span className="fas fa-trash-alt"></span></a></td>
+                            <td><a href={"link.html"}><span className="fa fa-cog"></span></a></td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+                <div className={"row"}>
+                    <div className={"col"}>
+                        <button className="btn btn-primary float-right">Neuer Wein</button>
+                    </div>
                 </div>
             </div>
         );
