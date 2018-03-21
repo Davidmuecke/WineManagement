@@ -21,7 +21,7 @@
 
     .btn {
         color: white;
-        background-color:  #670A0A;
+        background-color: #670A0A;
         border: none;
     }
 
@@ -33,17 +33,19 @@
         background-color: #F8F2E5;
         padding: 20px;
     }
+
     #navbarContainer {
         background-color: #343A40;
         padding: 0px;
     }
 
-    #wKundennummer {
-        margin-bottom: 70px;
+    h4 {
+        margin-top: 1.5em;
     }
 
-
-
+    .textAreaOrderAdd {
+        min-height: 7.25em;
+    }
 
     .formButton {
         width: 100%;
