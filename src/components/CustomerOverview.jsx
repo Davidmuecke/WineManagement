@@ -33,7 +33,7 @@ class CustomerOverview extends Component {
                     </div>
                 </form>
                 <div className={"table-responsive"}>
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped">
                     <thead>
                     <tr>
                         <th scope="col">Kundennummer</th>
@@ -61,20 +61,20 @@ class CustomerOverview extends Component {
                         <td>Stuttgart</td>
                         <td>70562</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Monsieur</td>
                         <td>Rocky</td>
-                        <td>Frommage 4</td>
+                        <td>Brie 2</td>
                         <td>Baguette</td>
                         <td>12345</td>
                         <td>Eifel 3</td>
                         <td>Fondue</td>
                         <td>70562</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
@@ -87,10 +87,15 @@ class CustomerOverview extends Component {
                         <td>Milano</td>
                         <td>3453</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     </tbody>
                 </table>
+                </div>
+                <div className={"row"}>
+                    <div className={"col"}>
+                        <button className="btn btn-primary float-right">Neuer Kunde</button>
+                    </div>
                 </div>
             </div>
         )
