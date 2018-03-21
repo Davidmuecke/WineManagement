@@ -8,16 +8,18 @@ class OrderOverview extends Component {
             <div className={"container"}>
                 <h2>Übersicht Bestellungen</h2>
                 <form className={"form-horizontal"}>
-                    <div class="input-group col-md-12">
+                    <div className={"row"}>
+                        <div className="input-group col-md-12">
                         <input type="text" placeholder="Bestellung suchen" className="form-control sm-10" id="wName"/>
-                        <span class="input-group-btn">
-                                    <button class="btn" type="button">
-                                        <i class="fas fa-search"></i>
+                            <span className="input-group-btn">
+                                    <button className="btn" type="button">
+                                        <i className="fas fa-search"></i>
                                     </button>
                                 </span>
                     </div>
+                    </div>
 
-                    <div class="table-responsive">
+                    <div className="table-responsive">
                         <table className={"table table-striped"}>
                             <thead>
                             <tr>

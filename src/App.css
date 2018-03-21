@@ -58,6 +58,11 @@
 
     .btn-secondary {
         margin-right: 1em;
+        background-color: #343a40;
+    }
+
+    .btn-secondary:hover {
+        background-color: #474f57;
     }
 
 /* .App {
