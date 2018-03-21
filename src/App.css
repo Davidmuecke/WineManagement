@@ -32,11 +32,13 @@
     .container {
         background-color: #F8F2E5;
         padding: 20px;
+        margin-bottom: 50px;
     }
 
     #navbarContainer {
         background-color: #343A40;
         padding: 0px;
+        margin-bottom: 0px;
     }
 
     h2 {
