@@ -5,16 +5,16 @@ body {
 }
 
 .form-stats {
-  margin-bottom: 15%;
+  margin-bottom: 7.5%;
 }
 
 .form-stats *, .form-backup *, .form-update * {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .form-user {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .btn-user-abbrechen {
