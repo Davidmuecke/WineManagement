@@ -33,7 +33,7 @@ class SupplierOverview extends Component {
                     </div>
                 </form>
                 <div className={"table-responsive"}>
-                    <table className="table table-striped table-bordered">
+                    <table className="table table-striped">
                     <thead>
                     <tr>
                         <th scope="col">Kundennummer</th>
