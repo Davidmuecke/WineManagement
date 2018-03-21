@@ -28,8 +28,8 @@ class WineOverview extends Component {
                         </div>
                     </div>
                 </form>
-                <div className={"table-striped table-bordered"}>
-                    <table className={"table"}>
+                <div className={"table-responsive"}>
+                    <table className={"table table-striped table-bordered"}>
                         <thead>
                         <tr>
                             <th>Nummer</th>

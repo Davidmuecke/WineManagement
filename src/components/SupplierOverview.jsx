@@ -28,8 +28,8 @@ class SupplierOverview extends Component {
                         </div>
                     </div>
                 </form>
-                <div className={"table-striped table-bordered"}>
-                <table class="table">
+                <div className={"table-responsive"}>
+                    <table className="table table-striped table-bordered">
                     <thead>
                     <tr>
                         <th scope="col">Kundennummer</th>
