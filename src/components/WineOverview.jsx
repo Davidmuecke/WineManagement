@@ -1,22 +1,58 @@
 import React, { Component}  from 'react';
+import config from "../config";
+import $ from "jquery";
 
 
 class WineOverview extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            searchTerm: ""
+            searchString: "",
+            tableHeader: [],
+            tableBody: [],
+            page: 1
         }
+        this.getServerData();
+    }
+
+    getServerData() {
+        $.getJSON(config.Server.serverURL + "wine/search", "").then(response => this.setState({
+            tableHeader: response.tableHeader,
+            tableBody: response.tableBody
+        }));
+    }
+
+    deleteWineTrigger(id) {
+        
     }
 
     changeFunk(obj) {
         var term = document.getElementById("wSuche").value;
         //Datenbankabfrage hier
         obj.setState({
-            searchTerm: term
+            searchString: term
         });
     }
     render() {
+        let head = [];
+        for (let i = 0; i < this.state.tableHeader.length; i++) {
+            head.push(<th>{this.state.tableHeader[i]}</th>);
+        }
+        head.push(<th><i className="fas fa-trash-alt"></i></th>);
+        head.push(<th><i className="fa fa-cog"></i></th>);
+        let body = [];
+        for (let a = 0; a < this.state.tableBody.length; a++) {
+            let row = [];
+            for (let b = 0; b < this.state.tableBody[a].length; b++) {
+                row.push(<td>{this.state.tableBody[a][b]}</td>);
+            }
+            row.push(<td><i className="fas fa-trash-alt"></i></td>);
+            row.push(<td className={"Link"}
+                         onClick={() => this.props.setState(this.props.STATES.wineAdd, this.state.tableBody[a][0])}><i
+                className="fa fa-cog"></i></td>);
+            body.push(<tr>{row}</tr>);
+        }
         return (
             <div className={"container"}>
                 <h2>Wein Übersicht {this.state.searchTerm}</h2>
@@ -37,46 +73,11 @@ class WineOverview extends Component {
                     <table className={"table table-striped"}>
                         <thead>
                         <tr>
-                            <th>Nummer</th>
-                            <th>Name</th>
-                            <th>Jahrgang</th>
-                            <th>Bestand</th>
-                            <th>Lieferant</th>
-                            <th>Einkaufspreis</th>
-                            <th>Verkaufspreis</th>
-                            <th>Anbauort</th>
-                            <th>Lagerort</th>
-                            <th><span className="fas fa-trash-alt"></span></th>
-                            <th><span className="fa fa-cog"></span></th>
+                            {head}
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1234567</td>
-                            <td>Kaiserwein</td>
-                            <td>1918</td>
-                            <td>3</td>
-                            <td>250.00€</td>
-                            <td>399.99€</td>
-                            <td>Prinzen Winzer</td>
-                            <td>Reingau</td>
-                            <td>Rothebühlplatz 41</td>
-                            <td><a href={"link.html"}><span className="fas fa-trash-alt"></span></a></td>
-                            <td><a href={"link.html"}><span className="fa fa-cog"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td>1234599</td>
-                            <td>Winterwein</td>
-                            <td>2017</td>
-                            <td>30</td>
-                            <td>14.23€</td>
-                            <td>19.99€</td>
-                            <td>Carmen W.</td>
-                            <td>Stuttgart</td>
-                            <td>Rothebühlplatz 41</td>
-                            <td><a href={"link.html"}><span className="fas fa-trash-alt"></span></a></td>
-                            <td><a href={"link.html"}><span className="fa fa-cog"></span></a></td>
-                        </tr>
+                        {body}
                         </tbody>
                     </table>
                 </div>

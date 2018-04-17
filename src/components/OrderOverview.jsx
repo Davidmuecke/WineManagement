@@ -1,9 +1,41 @@
 import React, { Component}  from 'react';
-
+import $ from 'jquery';
+import config from "../config";
 
 class OrderOverview extends Component {
-    render() {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            searchString: "",
+            tableHeader: [],
+            tableBody: [],
+            page: 1
+        }
+        this.getServerData();
+    }
+
+    getServerData() {
+        $.getJSON(config.Server.serverURL + "wine/search", "").then(response => this.setState({
+            tableHeader: response.tableHeader,
+            tableBody: response.tableBody
+        }));
+    }
+    render() {
+        let head = [];
+        for (let i = 0; i < this.state.tableHeader.length; i++) {
+            head.push(<th>{this.state.tableHeader[i]}</th>);
+        }
+        head.push(<th><i className="fas fa-trash-alt"></i></th>);
+        let body = [];
+        for (let a = 0; a < this.state.tableBody.length; a++) {
+            let row = [];
+            for (let b = 0; b < this.state.tableBody[a].length; b++) {
+                row.push(<td>{this.state.tableBody[a][b]}</td>);
+            }
+            row.push(<td><a href={"link.htm"}><i className="fas fa-trash-alt"></i></a></td>);
+            body.push(<tr>{row}</tr>);
+        }
         return (
             <div className={"container"}>
                 <h2>Übersicht Bestellungen</h2>
@@ -18,45 +50,15 @@ class OrderOverview extends Component {
                                 </span>
                     </div>
                     </div>
-
                     <div className="table-responsive">
                         <table className={"table table-striped"}>
                             <thead>
                             <tr>
-                                <th>Nummer</th>
-                                <th>Kunde</th>
-                                <th>Weinsorte</th>
-                                <th>Winzer</th>
-                                <th>Jahrgang</th>
-                                <th>Anzahl</th>
-                                <th>Einzelpreis</th>
-                                <th>Gesamtpreis</th>
-                                <th><i class="fas fa-trash-alt"></i></th>
+                                {head}
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>13571275</td>
-                                <td>Max Mustermann</td>
-                                <td>Rotwein</td>
-                                <td>Werner Winzer</td>
-                                <td>1960</td>
-                                <td>20</td>
-                                <td>5,00€</td>
-                                <td>100,00€</td>
-                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>23452345</td>
-                                <td>Helmut Hafer</td>
-                                <td>Weiswein</td>
-                                <td>Wille Weiner</td>
-                                <td>1875</td>
-                                <td>1</td>
-                                <td>500,00€</td>
-                                <td>500,00€</td>
-                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                            </tr>
+                            {body}
                             <tr>
                                 <td>54236346</td>
                                 <td>Gitti Gans</td>
@@ -66,7 +68,7 @@ class OrderOverview extends Component {
                                 <td>150</td>
                                 <td>2,30€</td>
                                 <td>345,00€</td>
-                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                                <td><a href={"link.htm"}><i className="fas fa-trash-alt"></i></a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -75,7 +77,9 @@ class OrderOverview extends Component {
                     </div>
                     <div className={"row"}>
                         <div className={"col"}>
-                            <button className="btn btn-primary float-right">Neue Bestellung</button>
+                            <button className="btn btn-primary float-right"
+                                    onClick={() => this.props.setState(this.props.STATES.orderAdd)}>Neue Bestellung
+                            </button>
                         </div>
                     </div>
                 </form>

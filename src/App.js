@@ -32,7 +32,8 @@ class App extends Component {
         })
         this.state = {
             screen: this.STATES.start,
-            login: false
+            login: false,
+            updateID: null
         }
     }
 
@@ -40,10 +41,11 @@ class App extends Component {
      * Function to update state from underling components
      * @param state
      */
-    updateState(state) {
+    updateState(state, id) {
         this.setState({
             screen: state,
-            login: this.state.login
+            login: this.state.login,
+            updateID: id
         });
     }
 
@@ -60,9 +62,10 @@ class App extends Component {
             case this.STATES.start:
                 return <Start STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.wineOverview:
-                return <WineOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
+                return <WineOverview STATES={this.STATES} setState={(screen, id) => this.updateState(screen, id)}/>;
             case this.STATES.wineAdd:
-                return <WineAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
+                return <WineAdd STATES={this.STATES} setState={i => this.updateState(i)}
+                                updateID={this.state.updateID}/>;
             case this.STATES.customerOverview:
                 return <CustomerOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.customerAdd:

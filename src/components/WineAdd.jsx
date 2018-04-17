@@ -8,6 +8,7 @@ class WineAdd extends Component {
         return (
             <div className={"container"}>
                 <h2>Wein hinzufügen</h2>
+                <p>{this.props.updateID}</p>
                 <form className={"form-horizontal"}>
                     <div className={"row"}>
                         <div className={"col-lg-4"}>
