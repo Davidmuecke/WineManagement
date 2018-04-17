@@ -54,33 +54,33 @@ class App extends Component {
     returnState() {
         switch (this.state.screen) {
             case this.STATES.login:
-                return <Login />;
+                return <Login STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.logout:
-                return <Logout />;
+                return <Logout STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.start:
-                return <Start />;
+                return <Start STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.wineOverview:
-                return <WineOverview />;
+                return <WineOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.wineAdd:
-                return <WineAdd />;
+                return <WineAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.customerOverview:
-                return <CustomerOverview />;
+                return <CustomerOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.customerAdd:
-                return <CustomerAdd />;
+                return <CustomerAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.supplierOverview:
-                return <SupplierOverview />;
+                return <SupplierOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.supplierAdd:
-                return <SupplierAdd />;
+                return <SupplierAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.administrationUser:
-                return <AdministrationUser />;
+                return <AdministrationUser STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.administrationBackup:
-                return <AdministrationBackup />;
+                return <AdministrationBackup STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.administrationStats:
-                return <AdministrationStats />;
+                return <AdministrationStats STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.orderOverview:
-                return <OrderOverview />;
+                return <OrderOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.orderAdd:
-                return <OrderAdd />;
+                return <OrderAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
 
             default:
                 return "FALSE STATE!";
