@@ -57,7 +57,7 @@ class SupplierOverview extends Component {
                         <td>Champagne</td>
                         <td>123123</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     <tr>
                         <th scope="row">1</th>
@@ -68,7 +68,7 @@ class SupplierOverview extends Component {
                         <td>Landau</td>
                         <td>74351</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     <tr>
                         <th scope="row">1</th>
@@ -79,10 +79,15 @@ class SupplierOverview extends Component {
                         <td>Springfield</td>
                         <td>123</td>
                         <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
-                        <td><span className="fa fa-cog"></span></td>
+                        <td><a href={"link.htm"}><span className="fa fa-cog"></span></a></td>
                     </tr>
                     </tbody>
                 </table>
+                </div>
+                <div className={"row"}>
+                    <div className={"col"}>
+                        <button className="btn btn-primary float-right">Neuer Winzer</button>
+                    </div>
                 </div>
             </div>
         )
