@@ -16,15 +16,23 @@ class WineOverview extends Component {
         this.getServerData();
     }
 
+    changeFunk(obj) {
+        var term = document.getElementById("wSuche").value;
+        //Datenbankabfrage hier
+        obj.setState({
+            searchTerm: term
+        });
+    }
+
     getServerData() {
-        $.getJSON(config.Server.serverURL + "wine/search", "").then(response => this.setState({
+        $.getJSON(config.Server.serverURL + "wine/get", "").then(response => this.setState({
             tableHeader: response.tableHeader,
             tableBody: response.tableBody
         }));
     }
 
     deleteWineTrigger(id) {
-        
+        $.getJSON(config.Server.serverURL + "wine/delete", {id: id.toString()}).then(() => console.log(""));
     }
 
     changeFunk(obj) {
@@ -51,7 +59,7 @@ class WineOverview extends Component {
             row.push(<td className={"Link"}
                          onClick={() => this.props.setState(this.props.STATES.wineAdd, this.state.tableBody[a][0])}><i
                 className="fa fa-cog"></i></td>);
-            body.push(<tr>{row}</tr>);
+            body.push(<tr onClick={() => this.deleteWineTrigger(this.state.tableBody[a][0])}>{row}</tr>);
         }
         return (
             <div className={"container"}>
