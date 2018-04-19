@@ -2,7 +2,9 @@ import React, { Component}  from 'react';
 import config from "../config";
 import $ from "jquery";
 
-
+/**
+ * Component class to display the supplier overview
+ */
 class SupplierOverview extends Component {
     /**
      * The app state includes
@@ -79,7 +81,7 @@ class SupplierOverview extends Component {
                 row.push(<td>{this.state.tableBody[a][b]}</td>);
             }
             row.push(<td onClick={() => this.deleteSupplierTrigger(this.state.tableBody[a][0])}><i
-                className="fas fa-trash-alt"></i></td>);
+                className="fas fa-trash-alt"/></td>);
             row.push(<td className={"Link"}
                          onClick={() => this.props.setState(this.props.STATES.supplierAdd, this.state.tableBody[a][0])}>
                 <i

@@ -1,21 +1,13 @@
 import React, { Component}  from 'react';
 
-
+/**
+ * Component class renders customer overview screen
+ */
 class CustomerOverview extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchTerm: ""
-        }
-    }
-
-    changeFunk(obj) {
-        var term = document.getElementById("cSuche").value;
-        //Datenbankabfrage hier
-        obj.setState({
-            searchTerm: term
-        });
-    }
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>

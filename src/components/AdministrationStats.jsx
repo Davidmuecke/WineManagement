@@ -1,7 +1,13 @@
 import React, { Component}  from 'react';
 
-
+/**
+ * Component class renders administration stats
+ */
 class AdministrationStats extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>

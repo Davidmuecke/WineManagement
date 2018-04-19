@@ -1,7 +1,13 @@
 import React, { Component}  from 'react';
 
-
+/**
+ * Class component renders user administration screen
+ */
 class AdministrationUser extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>

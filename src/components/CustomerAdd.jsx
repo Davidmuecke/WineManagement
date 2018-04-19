@@ -1,6 +1,13 @@
 import React, { Component}  from 'react';
 
+/**
+ * React component class renders customer add screen
+ */
 class CustomerAdd extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>
@@ -30,10 +37,10 @@ class CustomerAdd extends Component {
                         </div>
                         <div className={"col-lg-4"}>
 
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check1"/>
-                                    <label class="form-check-label" for="check1">Rechnungsadresse wie Lieferadresse</label>
-                                </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="check1"/>
+                                <label class="form-check-label" for="check1">Rechnungsadresse wie Lieferadresse</label>
+                            </div>
 
                         </div>
                     </div>

@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 
-
+/**
+ * Component class renders order add screen
+ */
 class OrderAdd extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>

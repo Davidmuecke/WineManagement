@@ -15,20 +15,27 @@ import AdministrationStats from './components/AdministrationStats';
 import OrderOverview from './components/OrderOverview';
 import OrderAdd from './components/OrderAdd';
 
+/**
+ * App component class render the web app
+ */
 class App extends Component {
     /**
      * Constructor with State ENUM
-     * @param props
+     * @param props from super
+     * state containes:
+     * ENUM with all states/screens
+     * screen => actual screen
+     * updateID => ID from item which should be changed
      */
     constructor(props) {
         super(props);
         //ENUM with states
         this.STATES = Object.freeze({"login":0, "logout":1, "start": 2,
-                                    "wineOverview": 10, "wineAdd": 11,
-                                    "customerOverview":20, "customerAdd":21,
-                                    "supplierOverview":30, "supplierAdd":31,
-                                    "administrationUser":40, "administrationBackup":41, "administrationStats":42,
-                                    "orderOverview": 50, "orderAdd":51
+            "wineOverview": 10, "wineAdd": 11,
+            "customerOverview": 20, "customerAdd": 21,
+            "supplierOverview": 30, "supplierAdd": 31,
+            "administrationUser": 40, "administrationBackup": 41, "administrationStats": 42,
+            "orderOverview": 50, "orderAdd": 51
         })
         this.state = {
             screen: this.STATES.start,
@@ -50,7 +57,7 @@ class App extends Component {
     }
 
     /**
-     *
+     * Return the actual screen component
      * @returns {string} actual component
      */
     returnState() {
@@ -90,6 +97,10 @@ class App extends Component {
         }
     }
 
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className="App">
@@ -111,8 +122,15 @@ class App extends Component {
 
 }
 
+/**
+ * Menu component class
+ * render the menu for all app screens
+ */
 class Menu extends Component {
-
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
 
@@ -126,7 +144,7 @@ class Menu extends Component {
                         </button>
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown">
-                                <button className="nav-link btn-link dropdown-toggle"  id="navbardrop"
+                                <button className="nav-link btn-link dropdown-toggle" id="navbardrop"
                                         data-toggle="dropdown">
                                     Bestellungen
                                 </button>
@@ -140,7 +158,7 @@ class Menu extends Component {
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <button className="nav-link btn-link dropdown-toggle"  id="navbardrop"
+                                <button className="nav-link btn-link dropdown-toggle" id="navbardrop"
                                         data-toggle="dropdown">
                                     Wein
                                 </button>

@@ -1,64 +1,65 @@
 import React, { Component}  from 'react';
-import $ from 'jquery';
-import config from "../config";
 
+/**
+ * Component class renders order overview
+ */
 class OrderOverview extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            searchString: "",
-            tableHeader: [],
-            tableBody: [],
-            page: 1
-        }
-        this.getServerData();
-    }
-
-    getServerData() {
-        $.getJSON(config.Server.serverURL + "wine/search", "").then(response => this.setState({
-            tableHeader: response.tableHeader,
-            tableBody: response.tableBody
-        }));
-    }
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
-        let head = [];
-        for (let i = 0; i < this.state.tableHeader.length; i++) {
-            head.push(<th>{this.state.tableHeader[i]}</th>);
-        }
-        head.push(<th><i className="fas fa-trash-alt"></i></th>);
-        let body = [];
-        for (let a = 0; a < this.state.tableBody.length; a++) {
-            let row = [];
-            for (let b = 0; b < this.state.tableBody[a].length; b++) {
-                row.push(<td>{this.state.tableBody[a][b]}</td>);
-            }
-            row.push(<td><a href={"link.htm"}><i className="fas fa-trash-alt"></i></a></td>);
-            body.push(<tr>{row}</tr>);
-        }
         return (
             <div className={"container"}>
                 <h2>Übersicht Bestellungen</h2>
                 <form className={"form-horizontal"}>
-                    <div className={"row"}>
-                        <div className="input-group col-md-12">
+                    <div class="input-group col-md-12">
                         <input type="text" placeholder="Bestellung suchen" className="form-control sm-10" id="wName"/>
-                            <span className="input-group-btn">
-                                    <button className="btn" type="button">
-                                        <i className="fas fa-search"></i>
+                        <span class="input-group-btn">
+                                    <button class="btn" type="button">
+                                        <i class="fas fa-search"></i>
                                     </button>
                                 </span>
                     </div>
-                    </div>
-                    <div className="table-responsive">
+
+                    <div class="table-responsive">
                         <table className={"table table-striped"}>
                             <thead>
                             <tr>
-                                {head}
+                                <th>Nummer</th>
+                                <th>Kunde</th>
+                                <th>Weinsorte</th>
+                                <th>Winzer</th>
+                                <th>Jahrgang</th>
+                                <th>Anzahl</th>
+                                <th>Einzelpreis</th>
+                                <th>Gesamtpreis</th>
+                                <th><i class="fas fa-trash-alt"></i></th>
                             </tr>
                             </thead>
                             <tbody>
-                            {body}
+                            <tr>
+                                <td>13571275</td>
+                                <td>Max Mustermann</td>
+                                <td>Rotwein</td>
+                                <td>Werner Winzer</td>
+                                <td>1960</td>
+                                <td>20</td>
+                                <td>5,00€</td>
+                                <td>100,00€</td>
+                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>23452345</td>
+                                <td>Helmut Hafer</td>
+                                <td>Weiswein</td>
+                                <td>Wille Weiner</td>
+                                <td>1875</td>
+                                <td>1</td>
+                                <td>500,00€</td>
+                                <td>500,00€</td>
+                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
+                            </tr>
                             <tr>
                                 <td>54236346</td>
                                 <td>Gitti Gans</td>
@@ -68,7 +69,7 @@ class OrderOverview extends Component {
                                 <td>150</td>
                                 <td>2,30€</td>
                                 <td>345,00€</td>
-                                <td><a href={"link.htm"}><i className="fas fa-trash-alt"></i></a></td>
+                                <td><a href={"link.htm"}><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                             </tbody>
                         </table>

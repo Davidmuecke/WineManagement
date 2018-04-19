@@ -1,7 +1,14 @@
 import React, { Component}  from 'react';
 
 
+/**
+ * Component class renders logout screen
+ */
 class Logout extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>

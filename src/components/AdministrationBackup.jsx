@@ -1,6 +1,13 @@
 import React, { Component}  from 'react';
 
+/**
+ * Component class displays the administration backup screen
+ */
 class AdministrationBackup extends Component {
+    /**
+     * render HTMl Code
+     * @returns html code
+     */
     render() {
         return (
             <div className={"container"}>
