@@ -1,9 +1,18 @@
-import React, { Component}  from 'react';
+import React, {Component} from 'react';
 import config from "../config";
 import $ from "jquery";
 
-
+/**
+ * Class displays the WineOverview React Component which displays
+ * all wines and offers a delete and update functionality
+ */
 class WineOverview extends Component {
+    /**
+     * The app state includes
+     * String searchString - current search string
+     * Array[] tableHeader - contains all table header fields
+     * Array[][] tableBody - two dimensional array contains table body
+     */
     constructor(props) {
         super(props);
 
@@ -16,14 +25,27 @@ class WineOverview extends Component {
         this.getServerData();
     }
 
-    changeFunk(obj) {
+    /**
+     * react on changes to the input field and update the state with the matching wines
+     * from the server
+     */
+    changeFunk() {
+
         var term = document.getElementById("wSuche").value;
-        //Datenbankabfrage hier
-        obj.setState({
-            searchTerm: term
-        });
+        if (term === null || term === "") {
+            this.getServerData();
+        } else {
+            $.getJSON(config.Server.serverURL + "wine/search", {query: term}).then(response => this.setState({
+                tableHeader: response.tableHeader,
+                tableBody: response.tableBody,
+                searchString: term
+            }));
+        }
     }
 
+    /**
+     * Get all saved wines from the server and update the table
+     */
     getServerData() {
         $.getJSON(config.Server.serverURL + "wine/get", "").then(response => this.setState({
             tableHeader: response.tableHeader,
@@ -31,24 +53,27 @@ class WineOverview extends Component {
         }));
     }
 
+    /**
+     * delete wine from server database
+     * @param id ID of the wine, which should be deleted
+     */
     deleteWineTrigger(id) {
         $.getJSON(config.Server.serverURL + "wine/delete", {id: id.toString()}).then(() => console.log(""));
     }
 
-    changeFunk(obj) {
-        var term = document.getElementById("wSuche").value;
-        //Datenbankabfrage hier
-        obj.setState({
-            searchString: term
-        });
-    }
+    /**
+     * Render React Component
+     * @returns  html code
+     */
     render() {
+        //generate table head
         let head = [];
         for (let i = 0; i < this.state.tableHeader.length; i++) {
             head.push(<th>{this.state.tableHeader[i]}</th>);
         }
         head.push(<th><i className="fas fa-trash-alt"></i></th>);
         head.push(<th><i className="fa fa-cog"></i></th>);
+        //generate table body
         let body = [];
         for (let a = 0; a < this.state.tableBody.length; a++) {
             let row = [];
@@ -61,9 +86,10 @@ class WineOverview extends Component {
                 className="fa fa-cog"></i></td>);
             body.push(<tr onClick={() => this.deleteWineTrigger(this.state.tableBody[a][0])}>{row}</tr>);
         }
+        //return HTML code
         return (
             <div className={"container"}>
-                <h2>Wein Übersicht {this.state.searchTerm}</h2>
+                <h2>Wein Übersicht</h2>
                 <form className={"form"}>
                     <div className={"row"}>
                         <div className="input-group col-lg-12">
@@ -91,7 +117,9 @@ class WineOverview extends Component {
                 </div>
                 <div className={"row"}>
                     <div className={"col"}>
-                        <button className="btn btn-primary float-right">Neuer Wein</button>
+                        <button onClick={() => this.props.setState(this.props.STATES.wineAdd)}
+                                className="btn btn-primary float-right">Neuer Wein
+                        </button>
                     </div>
                 </div>
             </div>
