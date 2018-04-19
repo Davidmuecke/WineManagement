@@ -58,7 +58,13 @@ class WineOverview extends Component {
      * @param id ID of the wine, which should be deleted
      */
     deleteWineTrigger(id) {
-        $.getJSON(config.Server.serverURL + "wine/delete", {id: id.toString()}).then(() => console.log(""));
+        $.getJSON(config.Server.serverURL + "wine/delete", {id: id.toString()}).then((response) => {
+            console.log(console.log(response.result));
+            if (!response.result) {
+                window.alert("Wein kann nicht gelöscht werden!");
+            }
+            this.changeFunk();
+        });
     }
 
     /**
@@ -80,11 +86,12 @@ class WineOverview extends Component {
             for (let b = 0; b < this.state.tableBody[a].length; b++) {
                 row.push(<td>{this.state.tableBody[a][b]}</td>);
             }
-            row.push(<td><i className="fas fa-trash-alt"></i></td>);
+            row.push(<td onClick={() => this.deleteWineTrigger(this.state.tableBody[a][0])}><i
+                className="fas fa-trash-alt"></i></td>);
             row.push(<td className={"Link"}
-                         onClick={() => this.props.setState(this.props.STATES.wineAdd, this.state.tableBody[a][0])}><i
-                className="fa fa-cog"></i></td>);
-            body.push(<tr onClick={() => this.deleteWineTrigger(this.state.tableBody[a][0])}>{row}</tr>);
+                         onClick={() => this.props.setState(this.props.STATES.wineAdd, this.state.tableBody[a][0])}>
+                <i className="fa fa-cog"></i></td>);
+            body.push(<tr>{row}</tr>);
         }
         //return HTML code
         return (
