@@ -29,7 +29,7 @@ class WineOverview extends Component {
      * react on changes to the input field and update the state with the matching wines
      * from the server
      */
-    changeFunk() {
+    changeFunc() {
 
         var term = document.getElementById("wSuche").value;
         if (term === null || term === "") {
@@ -63,7 +63,7 @@ class WineOverview extends Component {
             if (!response.result) {
                 window.alert("Wein kann nicht gelöscht werden!");
             }
-            this.changeFunk();
+            this.changeFunc();
         });
     }
 
@@ -101,7 +101,7 @@ class WineOverview extends Component {
                     <div className={"row"}>
                         <div className="input-group col-lg-12">
                             <input type="text" placeholder="Wein suchen" className="form-control sm-10" id="wSuche"
-                                   onChange={() => this.changeFunk(this)}/>
+                                   onChange={() => this.changeFunc(this)}/>
                             <span className="input-group-btn">
                                 <button className="btn" type="button">
                                     <i className="fas fa-search"></i>
