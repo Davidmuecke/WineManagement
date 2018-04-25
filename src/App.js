@@ -78,9 +78,9 @@ class App extends Component {
             case this.STATES.customerAdd:
                 return <CustomerAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.supplierOverview:
-                return <SupplierOverview STATES={this.STATES} setState={i => this.updateState(i)}/>;
+                return <SupplierOverview STATES={this.STATES} setState={(screen, id) => this.updateState(screen, id)}/>;
             case this.STATES.supplierAdd:
-                return <SupplierAdd STATES={this.STATES} setState={i => this.updateState(i)}/>;
+                return <SupplierAdd STATES={this.STATES} updateID={this.state.updateID} setState={i => this.updateState(i)}/>;
             case this.STATES.administrationUser:
                 return <AdministrationUser STATES={this.STATES} setState={i => this.updateState(i)}/>;
             case this.STATES.administrationBackup:
