@@ -4,27 +4,33 @@ import config from "../config";
 
 
 /**
- *
+ * Class displays the WineAdd React Component which displays
+ * the form to add a supplier
  */
+
 class WineAdd extends Component {
 
+    /**
+     * The constructor calls the function checkUpdateID and getServerData()
+     * @param props to get this.props.updateID
+     * The app state includes
+     * Array[][] tableBody - two dimensional array contains suppliers
+     */
     constructor(props){
 
         super(props);
         this.state = {
-            tableHeader: [],
-            tableBody: [],
-            items: []
+            tableBody: []
         }
         this.checkUpdateID();
         this.getServerData();
     }
 
     /**
-     *
-     * @param obj
+     * function controls the input fields and decides
+     * wether a wine will be added or updated
      */
-    setWine(obj){
+    setWine(){
         if ((document.getElementById("name").value === "") || (document.getElementById("year").value === "") ||
                 (document.getElementById("amount").value === "") || (document.getElementById("deliveryDate").value === "") ||
                 (document.getElementById("basePrice").value === "") || (document.getElementById("sellPrice").value === "") ||
@@ -40,11 +46,13 @@ class WineAdd extends Component {
             }
         }
 
+    /**
+     * gets the supplier and creates the optionlist for the supplier-select
+     */
     getServerData() {
         $.getJSON(config.Server.serverURL + "supplier/get", "").then(response => {
 
             this.setState({
-                tableHeader: response.tableHeader,
                 tableBody: response.tableBody
             });
                 let optionList = document.getElementById('supplierID').options;
@@ -59,16 +67,27 @@ class WineAdd extends Component {
         });
     }
 
+    /**
+     * adds a wine to the database
+     */
     addWine(){
         let data = $("form").serialize();
         $.post( config.Server.serverURL + "wine/add", data );
     }
 
+    /**
+     * updates a wine in the database
+     */
     updateWine(){
         let data = $("form").serialize();
         $.post( config.Server.serverURL + "wine/update", data );
     }
 
+    /**
+     * decides, wether a wine will be updated or added
+     * if a wine should be updatet, the values of the wine
+     * are loaded into the input fields
+     */
     checkUpdateID(){
         if(this.props.updateID === null || this.props.updateID === undefined || this.props.updateID === 0) {
             console.log("updateID is undefined");
@@ -88,11 +107,11 @@ class WineAdd extends Component {
     }
 
 
-
+    /**
+     * Render React Component
+     * @returns  html code
+     */
     render() {
-
-
-
         return (
             <div className={"container"}>
                 <h2>Wein hinzufügen</h2>
@@ -172,7 +191,7 @@ class WineAdd extends Component {
                     <div className={"row"}>
                         <div className={"col-lg-8"}/>
                         <div className={"col-lg-4"}>
-                            <button type="button" onClick={() => this.setWine(this)} className="btn btn-primary float-right">Speichern</button>
+                            <button type="button" onClick={() => this.setWine()} className="btn btn-primary float-right">Speichern</button>
                             <button type="cancel" className="btn btn-secondary float-right">Abbrechen</button>
                         </div>
                     </div>

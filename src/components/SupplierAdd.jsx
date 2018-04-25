@@ -2,16 +2,25 @@ import React, { Component}  from 'react';
 import $ from 'jquery';
 import config from "../config";
 
+/**
+ * Class displays the SupplierAdd React Component which displays
+ * the form to add a supplier
+ */
 class SupplierAdd extends Component {
 
-
+    /**
+     * The constructor calls the function checkUpdateID
+     * @param props to get this.props.updateID
+     */
     constructor(props){
         super(props);
         this.checkUpdateID();
     }
-
-
-    async setSupplier(obj){
+    /**
+    * function controls the input fields and decides
+    * wether a supplier will be added or updated
+    */
+    setSupplier(){
         if((document.getElementById("name").value==="") || (document.getElementById("region").value==="") ||
             (document.getElementById("country").value==="") || (document.getElementById("street").value==="") ||
             (document.getElementById("city").value==="") || (document.getElementById("post").value==="")){
@@ -25,6 +34,9 @@ class SupplierAdd extends Component {
         }
     }
 
+    /**
+     * adds a address to the database and a supplier with the address-refernce-id
+     */
     addSupplier(){
         let data = $("form").serialize();
         $.post(config.Server.serverURL + "address/add", data, function(data){
@@ -34,6 +46,9 @@ class SupplierAdd extends Component {
         });
     }
 
+    /**
+     * adds a adress to the database and updates a supplier
+     */
     updateSupplier(){
         let data = $("form").serialize();
         $.post(config.Server.serverURL + "address/add", data, function(data){
@@ -43,6 +58,11 @@ class SupplierAdd extends Component {
         });
     }
 
+    /**
+     * decides, wether a supplier will be updated or added
+     * if a wine supplier be updatet, the values of the wine
+     * are loaded into the input fields
+     */
     checkUpdateID(){
         let adresse;
         if(this.props.updateID === null || this.props.updateID === undefined || this.props.updateID === 0) {
@@ -64,7 +84,10 @@ class SupplierAdd extends Component {
         }
     }
 
-
+    /**
+     * Render React Component
+     * @returns  html code
+     */
     render() {
         return (
             <div className={"container"}>
@@ -117,7 +140,7 @@ class SupplierAdd extends Component {
                     <div className={"row"}>
                         <div className={"col-lg-9"}/>
                         <div className={"col-lg-3"}>
-                            <button onClick={() => this.setSupplier(this)} type="button" className="btn btn-primary float-right">Speichern</button>
+                            <button onClick={() => this.setSupplier()} type="button" className="btn btn-primary float-right">Speichern</button>
                             <button type="cancel" className="btn btn-secondary float-right">Abbrechen</button>
                         </div>
                     </div>
