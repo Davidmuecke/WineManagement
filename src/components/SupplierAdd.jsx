@@ -40,7 +40,7 @@ class SupplierAdd extends Component {
     addSupplier(){
         let data = $("form").serialize();
         $.post(config.Server.serverURL + "address/add", data, function(data){
-            document.getElementById("adresse_id").setAttribute("value", data.insertId);
+            document.getElementById("addressID").setAttribute("value", data.insertId);
             let dataHelp = $("form").serialize();
             $.post(config.Server.serverURL + "supplier/add", dataHelp);
         });
@@ -52,7 +52,7 @@ class SupplierAdd extends Component {
     updateSupplier(){
         let data = $("form").serialize();
         $.post(config.Server.serverURL + "address/add", data, function(data){
-            document.getElementById("adresse_id").setAttribute("value", data.insertId);
+            document.getElementById("addressID").setAttribute("value", data.insertId);
             let dataHelp = $("form").serialize();
             $.post(config.Server.serverURL + "supplier/update", dataHelp);
         });
@@ -71,7 +71,7 @@ class SupplierAdd extends Component {
                 $.getJSON(config.Server.serverURL + "supplier/getById" + "?id=" + this.props.updateID, this.props.updateID).then(response =>
                 {   document.getElementById("name").value = response.name;
                     document.getElementById("region").value = response.region;
-                    document.getElementById("adresse_id").value = response.addressID;
+                    document.getElementById("addressID").value = response.addressID;
                     adresse = response.addressID;
                     $.getJSON(config.Server.serverURL + "address/getById" + "?id=" + adresse, adresse).then(response =>
                     {   document.getElementById("country").value = response.country;
@@ -95,7 +95,7 @@ class SupplierAdd extends Component {
                 <form className={"form-horizontal"}>
                     <div className={"row"}>
                         <div className={"col-lg-4"}>
-                            <input type="hidden" name="adresse_id" id="adresse_id" value="1"/>
+                            <input type="hidden" name="addressID" id="addressID" value="1"/>
                             <input type="hidden" id="id" name="id" value={this.props.updateID}/>
                                 <div className={"form-group row"}>
                                     <label className={"control-label col-sm-3 col-form-label"} for="name">Name</label>
