@@ -11,7 +11,7 @@ class CustomerOverview extends Component {
     render() {
         return (
             <div className={"container"}>
-                <h2>Kunden Übersicht {this.state.searchTerm}</h2>
+                <h2>Kunden Übersicht</h2>
                 <form className={"form"}>
                         <div className={"row"}>
                             <div className="input-group col-md-12">

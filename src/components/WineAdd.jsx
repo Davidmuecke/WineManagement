@@ -72,7 +72,7 @@ class WineAdd extends Component {
      */
     addWine(){
         let data = $("form").serialize();
-        $.post( config.Server.serverURL + "wine/add", data );
+        $.post( config.Server.serverURL + "wine/add", data ).promise().then( this.props.setState(this.props.STATES.wineOverview));
     }
 
     /**
@@ -80,7 +80,7 @@ class WineAdd extends Component {
      */
     updateWine(){
         let data = $("form").serialize();
-        $.post( config.Server.serverURL + "wine/update", data );
+        $.post( config.Server.serverURL + "wine/update", data ).promise().then( this.props.setState(this.props.STATES.wineOverview));
     }
 
     /**

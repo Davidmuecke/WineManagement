@@ -58,7 +58,7 @@ class SupplierOverview extends Component {
      */
     deleteSupplierTrigger(id) {
         $.getJSON(config.Server.serverURL + "supplier/delete", {id: id.toString()}).then((response) => {
-            console.log(console.log(response.result));
+            console.log(response.result);
             if (!response.result) {
                 window.alert("Winzer kann nicht gelöscht werden!");
             }
